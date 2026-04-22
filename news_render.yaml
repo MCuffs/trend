@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: news-mcp-server
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python news_mcp_sse.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.0
+    plan: free
